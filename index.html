@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<meta name="description" content="Free jQuery Tagging plugin prettyTag that let's you create dynamic colorful cloud tags both in tags input and tags display mode." />
+<title> jQuery Auto Colorful Tags with prettyTag Plugin </title>
+
+   <!--jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--temp-->
+<script src="../js/jquery.min.js"></script>
+<link rel="stylesheet" href="../icons/css/font-awesome.min.css" />
+
+   <!--prettyTag JS-->
+<script src="js/jquery.prettytag.js"></script>
+
+   <!--prettyTag CSS-->
+<link rel="stylesheet" href="css/prettytag.css" />
+
+<script>
+$(document).ready(function(){
+
+$(".cloud-tags").prettyTag();
+
+$(".tags").prettyTag({
+  randomColor: true,
+  tagicon: false,
+
+  });
+
+}); //jQuery
+</script>
+</head>
+<body>
+
+<!--Demo and Using Guide-->
+<header class="intro">
+      <h1> jQuery Auto Colorful Tags with prettyTag Plugin </h1>
+      
+<p> prettyTag let's you create dynamic colorful cloud tags both in tags input and tags display mode.
+         <br />
+         <br />
+<b> Written in:</b><i> HTML, CSS and JavaScript</i><br>
+          <b> Framework: </b> <i>  jQuery 3.3.1 - Font Awesome (Optional)</i>
+      </p>
+<div class="action">
+<a class="btn github" href="#3"> Fork on GiHub </a>
+<a class="btn down" href="#3">Download </a>
+
+</div>
+</header>
+<main>
+<article>
+
+   <!--prettyTag Demo-->
+
+ <h2>Colorful Cloud Tags Example</h2>
+<p>The Following example illustrates prettyTag auto colored tags (display mode) to show colorful tags to visitors. </p>
+
+   <ul class="cloud-tags">
+      <li><a href="#2"> Web Design </a> </li>
+      <li> <a href="#2"> CSS Tutorial </a> </li>
+      <li> <a href="#2"> jQueryScript.net</a> </li>
+      <li> <a href="#2"> Codehim.com </a> </li>
+      <li> <a href="#2"> jQuery </a></li>
+      <li> <a href="#2"> Cloud Tags</a></li>
+      <li> <a href="#2"> Easy Learning </a></li>
+      <li> <a href="#2"> CSS3</a></li>
+      <li> <a href="#2"> Tagging  </a></li>
+      <li> <a href="#2"> jQuery Plugin </a></li>
+      <li> <a href="#2"> HTML5 </a></li>
+      <li> <a href="#2"> CSS3 </a></li>
+   </ul>
+
+<!--prettyTag Input Mode-->
+
+<h2> Tags Input Mode </h2>
+<p>The Following example illustrates prettyTag auto colored tags (input mode) when user creates new tags.</p>
+
+   <p><b> Enter tag name and separate with comma.</b> </p>
+
+
+
+<input class="codehim-input-tags" name="tags" type="text" />
+
+<section class="show-input-tags">
+
+<ul class="tags cloud-tags"></ul>
+
+</section>
+
+<h2>prettyTag Main Features</h2>
+
+<ul>
+<li>Lightweight File Size.</li>
+<li>Can be Handle a Large Number of Tags to Set Automatically Color. </li>
+<li>Attractive Collection of Colors.</li>
+<li>Option to Randomly Color Each Tag. </li>
+<li>Provide way to add new tags, input tags append and store in a array with its link.</li>
+<li>Easy to use and implement.</li>
+</ul>
+
+<h2> How to Use</h2>
+
+<p>1. Load the jQuery JavaScript library, prettyTag JS & CSS file into HTML document.</p>
+
+<pre class="prettyprint lang-html">
+&lt;!--jQuery--&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;!--prettyTag JS--&gt;
+&lt;script src="js/jquery.prettytag.js"&gt;&lt;/script&gt;
+
+&lt;!--prettyTag CSS--&gt;
+&lt;link rel="stylesheet" href="css/prertytag.css" /&gt;
+</pre>
+
+
+<p>2. Create an unordered list of tags with their links in HTML, with the following mentioned class.</p>
+
+<pre class="prettyprint lang-html">
+&lt;ul class="cloud-tags"&gt;
+      &lt;li&gt; &lt;a href="#tag_link"&gt; Tag name &lt;/a&gt; &lt;/li&gt;
+      &lt;li&gt; &lt;a href="#tag_link"&gt; Tag name two &lt;/a&gt; &lt;/li&gt;
+      &lt;li&gt; &lt;a href="#tag_link"&gt; jQueryScript.net&lt;/a&gt; &lt;/li&gt;
+      &lt;li&gt; &lt;a href="#tag_link"&gt; Codehim.com &lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p> 3. And finally call the <code> prettyTag()</code> with class name <code>cloud-tags</code> in document ready function. </p>
+
+<pre class="prettyprint lang-jd">
+$(document).ready(function(){
+
+$(".cloud-tags").prettyTag();
+
+});
+</pre>
+
+<h3> prettyTag Input Tags </h3>
+<p>To build input tags mode, create a input element in HTML document with the following mentioned classes and other necessary elements.   </p>
+
+<pre class="prettyprint lang-html">
+&lt;input class="codehim-input-tags" name="tags" type="text" /&gt;
+
+&lt;section class="show-input-tags"&gt;
+
+&lt;ul class="tags cloud-tags"&gt;&lt;/ul&gt;
+
+&lt;/section&gt;
+</pre>
+
+<h2> prettyTag Plugin Options </h2>
+
+<p>There are three options available to customize the working of this plugin. </p>
+
+<pre class="prettyprint lang-js">
+   randomColor: true, //false to off random color 
+   tagicon: true, //false to turn off tags icon
+   tagURL: "#", //url that will be assigned to new tags when user enter a tag name
+</pre>
+
+<p> To turn off random color and font awesome tag icon update these value.</p>
+<pre class="prettyprint lang-jd">
+$(document).ready(function(){
+
+$(".cloud-tags").prettyTag({
+    randomColor: false, 
+    tagicon: false,
+ });
+
+});
+</pre>
+
+<p> The third option is only for tags input mode. When new tags added, this option will assign a url parameter to tag name. </p>
+<p><b>Tip: </b> You can use <code> ?tag=</code> or your custom url parameter in this option. </p>
+
+<p>The value of each new Tag Name and it's generated URL stored in a array named <code> tagsManager</code>. You can further use this array to submit tags etc.</p>
+
+</article>
+</main>
+
+<!--Demo ONLY FILES-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="docs/demo-only.css" />
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"> </script> 
+
+<footer class="credit">
+Coded with <span title="Coffee"></span> by Asif Mughal &copy; 2018 - <a href="https://www.codehim.com" rel="dofollow" title="Awesome Web Projects and Tutorials" target="_blank"> Codehim.com </a>
+      </footer>
+</body>
+</html>
