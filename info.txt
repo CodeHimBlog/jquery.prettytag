@@ -1,7 +1,7 @@
 jQuery Plugin: prettyTag (Auto Colored Tags) Developed by Codehim.
 
 For Live Demo and Using Guide:
-https://codehimblog.github.io/jquery-auto-colored-tags/
+https://codehimblog.github.io/jquery.prettytag/
 
 For more Awesome Web projects and plugins keep visiting us:
 
