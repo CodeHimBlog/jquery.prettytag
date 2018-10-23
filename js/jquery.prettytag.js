@@ -11,9 +11,9 @@
 (function($){
       $.fn.prettyTag = function(options) {
       var setting = $.extend({
-    		        randomColor: true, //false to off random color 
+    		     randomColor: true, //false to off random color 
                  tagicon: true, //false to turn off tags icon
-                tagURL: "#", //url that will be assigned to new tags when user enter a tag name
+                 tagURL: "#", //url that will be assigned to new tags when user enter a tag name
   		   }, options);
   
         return this.each(function() {           
